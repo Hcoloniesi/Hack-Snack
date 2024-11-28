@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>CARDÁPIO</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: hsl(36, 56%, 91%);
+            color: #502314;
+        }
+
+        a {
+            color: #502314;
+            text-decoration: none;
+            margin: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a:hover {
+            background-color: #502314;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .container-topo {
+            background-color: #502314;
+            color: hsl(36, 56%, 91%);
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .container-cardapio {
+            margin-left: 150px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px 120px;
+            column-gap: 200px;
+            height: 1200px;
+            width: 1800px;
+        }
+
+        /* Restaurando os cards exatamente como na versão original */
+        .card {
+            border: 5px solid #502314;
+            width: 403px;
+            height: 470px;
+            border-radius: 12px;
+            box-shadow: 4px 4px 12px #aaa;
+            margin: 0px;
+        }
+
+        .card img {
+            
+            margin-left: -10px;
+            width: 393px;
+            height: 393px;
+            border-radius: 5px;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .card span {
+            display: block;
+            text-align: center;
+            font-size: 1rem;
+            color: #502314;
+        }
+
+        .container-rodape {
+            background-color: #502314;
+            color: hsl(36, 56%, 91%);
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container-rodape h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .instagram img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        #cabecalho {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #a38778;
+        }
+
+        /* Responsividade */
+        .container-cardapio{
+            /* background-color: red; */
+            margin-left: 150px;
+            display:flex; 
+            align-items: center;
+            flex-wrap:wrap ;
+            gap: 20px 120px; 
+            column-gap: 200px;
+            height: 1200px;
+            width: 1800px;
+            
+        }
+        button{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="img/logo.png" alt="logo" height="100" width="100">
+    
+    <section id="cabecalho">
+        <a href="./Inicio.html">INÍCIO</a>
+        <a href="./Cardapio.html">CARDÁPIO</a>
+        <a href="./Delivery.html">DELIVERY</a>
+    </section>
+
+    <div class="container-topo">
+        <h1>CARDÁPIO</h1>
+    </div>
+
+    <div class="container-cardapio">
+        <!-- Card de exemplo -->
+        <div class="card">
+            <a href="bacon.html">
+                <button type="submit" id="bacon">
+                    <img src="img/lanches/bacon.PNG"  height="377" width="379" id="imagem" >
+                </button>
+            </a>
+
+            <div>
+                <h2>MEGA BACON</h2>
+                <span>R$21,99</span>
+            </div>
+        </div>
+
+        <!-- Outros cards seguem o mesmo formato -->
+        <div class="card">
+            <a href="frito.html">
+                <button type="submit" id="frito">
+                    <img src="img/lanches/frito.PNG" alt="Frango Frito" >
+                </button>
+            </a>
+            <div>
+                <h2>FRANGO FRITO</h2>
+                <span>R$19,99</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="grelhado.html">
+                <button type="submit" id="grelhado">
+                    <img src="img/lanches/grelhado.PNG" alt="Frango Grelhado">
+                </button>
+            </a>
+            <div>
+                <h2>FRANGO GRELHADO</h2>
+                <span>R$17,99</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="hamburguer.html">
+                <button type="submit" id="hamburguer">
+                    <img src="img/lanches/hamburguer1.PNG" alt="Snack Grande">
+                </button>
+            </a>
+            <div>
+                <h2>SNACK GRANDE</h2>
+                <span>R$15,00</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="queijo.html">
+                <button type="submit" id="queijo">
+                    <img src="img/lanches/mega queijo.PNG" alt="Mega Queijo">
+                </button>
+            </a>
+            <div>
+                <h2>MEGA QUEIJO</h2>
+                <span>R$18,99</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="vegay.html">
+                <button type="submit" id="veg">
+                    <img src="img/lanches/vegano.PNG" alt="Vegay">
+                </button>
+            </a>
+            <div>
+                <h2>VEGAY</h2>
+                <span>R$25,99</span>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container-rodape">
+            <h2>nossas redes</h2>
+            <div class="instagram">
+                <a href="https://www.instagram.com/hacksnackbr/profilecard/?igsh=MTRlczJkcngzOGJlaw==">
+                    <img src="img/instagram.jpg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>Hack&Snack®</title>
+    <style>
+        /* Estilo básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: hsl(36, 56%, 91%);
+            color: #502314;
+        }
+
+        a {
+            color: #502314;
+            text-decoration: none;
+            margin: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a:hover {
+            background-color: #502314;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        #cabecalho {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #a38778 ;
+        }
+
+        .container-topo {
+            background-color: #502314;
+            color: hsl(36, 56%, 91%);
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .container-delivery {
+            margin: 50px auto;
+            max-width: 1200px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container-delivery h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .container-delivery p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .delivery-button {
+            display: inline-block;
+            background-color: #502314;
+            color: hsl(36, 56%, 91%);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .delivery-button:hover {
+            background-color: hsl(36, 56%, 91%);
+            color: #502314;
+            border: 2px solid #502314;
+            transition: all 0.3s ease;
+        }
+
+        .container-rodape {
+            margin-top: 200px;
+            background-color: #502314;
+            color: hsl(36, 56%, 91%);
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container-rodape h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .instagram img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container-delivery {
+                padding: 15px;
+            }
+
+            .container-delivery h2 {
+                font-size: 1.5rem;
+            }
+
+            .container-delivery p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .delivery-button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="img/logo.png" alt="logo" height="100" width="100">
+
+    <section id="cabecalho">
+        <a href="./Inicio.html">INÍCIO</a>
+        <a href="./Cardapio.html">CARDÁPIO</a>
+        <a href="./Delivery.html">DELIVERY</a>
+    </section>
+
+    <div class="container-topo">
+        <h1>DELIVERY</h1>
+    </div>
+
+    <div class="container-delivery">
+        <h2>Serviço de Entrega</h2>
+        <p>Desfrute de nossos deliciosos pratos no conforto de sua casa. Oferecemos um serviço de entrega rápido e seguro!</p>
+        <p><strong>Horário de Funcionamento:</strong> Segunda a Sábado, das 10h às 22h.</p>
+        <p><strong>Regiões Atendidas:</strong> Jundiaí, Várzea e Campo Limpo</p>
+        <p>Entre em contato conosco pelo WhatsApp ou clique no botão abaixo para fazer seu pedido agora mesmo!</p>
+        <a href="https://wa.me/11973604579" class="delivery-button">Fazer Pedido</a>
+    </div>
+
+    <section>
+        <div class="container-rodape">
+            <h2>Nossas Redes</h2>
+            <div class="instagram">
+                <a href="https://www.instagram.com/hacksnackbr/profilecard/?igsh=MTRlczJkcngzOGJlaw==">
+                    <img src="img/instagram.jpg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

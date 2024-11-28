@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>Hack&Snack®</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: hsl(36, 56%, 91%);
+        }
+        .container {
+            display: flex;
+            /* background-color: #502314ea; */
+            height: 600px;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-sorvete {
+            display: flex;
+            /* background-color:aquamarine; */
+
+            height: 600px;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-slider {
+            display: flex;
+            width: 100%;
+            height: 25vh;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 1rem;
+        }
+        .container-imagens {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+        }
+        .slider {
+            opacity: 0;
+            transition: opacity .2s;
+            position: absolute;
+            width: 790px;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .sliderS{
+            opacity: 0;
+            transition: opacity .2s;
+            position: absolute;
+            width: 790px;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .on {
+            opacity: 1;
+        }
+        .ons {
+            opacity: 1;
+        }
+        .prev-button, .next-button {
+            width: 200px;
+            height: 200px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            align-items: center;
+        }
+        .prev-button img, .next-button img {
+            width: 50px;
+            height: 50px;
+        }
+        .prev-button {
+            transform: rotate(180deg);
+        }
+        h2 {
+            text-align:center ;
+            color: #502314;
+        }
+        a {
+            color: #502314;
+            height: 30px;
+            width: 100px;
+            /*box-shadow: 3px 5px 0 #502314e8;*/
+            border-radius: 15%;
+            margin: 10px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        .container-rodape {
+            background-color: #502314;
+            color: hsl(36, 56%, 91%);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container-rodape h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        .container-rodape h4{
+            margin-top: 20px;
+        }
+
+        .instagram img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .instagram img:hover {
+            transform: scale(1.1);
+        }
+
+        .a{
+            margin: 0px;
+            border-radius: 12px;
+            background-color: red;
+        }
+        #cabecalho {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #a38778;
+        }
+        .container-topo {
+            background-color: #502314;
+            color: hsl(36, 56%, 91%);
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Times New Roman', serif;
+        }
+        .container-rodape h4{
+            margin-top: 20px;
+        }
+        .principaisLanches{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="img/logo.png" alt="logo" height="100" width="100">
+
+    <section id="cabecalho">
+        <a href="./Inicio.html">INÍCIO</a>
+        <a href="./Cardapio.html">CARDÁPIO</a>
+        <a href="./Delivery.html">DELIVERY</a>
+    </section>  
+
+    <div class="container-topo">
+        <h1>PRINCIPAIS PROMOÇÕES</h1>
+    </div>
+
+
+    <section id="principaisLanches"> 
+            <h2>DESTAQUES DO MÊS</h2>
+
+        <div class="container">
+            <div class="container-slider" data-slider="lanches">
+                <button class="prev-button"><img src="img/arrow.png" alt="prev-button"></button>
+                <div class="container-imagens">
+                    <img src="img/htmlBurguer.png" alt="htmlBurguer" class="slider on">
+                    <img src="img/cssBurguer.png" alt="cssBurguer" class="slider">
+                    <img src="img/jsBurguer.png" alt="jsBurguer" class="slider">
+                    <input type="submit">
+                </div>
+                <button class="next-button"><img src="img/arrow.png" alt="next-button"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sorvetes"> 
+        <h2>SOBREMESAS</h2>
+        <div class="container-sorvete">
+            <div class="container-slider" data-slider="sorvetes">
+                <button class="prev-button"><img src="img/arrow.png" alt="prev-buttonS"></button>
+                <div class="container-imagens">
+                    <img src="img/SobMor.png" alt="SobMor" class="sliderS ons">
+                    <img src="img/sobBau.png" alt="sobBau" class="sliderS">
+                    <img src="img/sobChoc.png" alt="sobChoc" class="sliderS">
+                    <img src="img/sobBrown.png" alt="sobBrown" class="sliderS">
+
+                </div>
+                <button class="next-button"><img src="img/arrow.png" alt="next-buttonS"></button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.container-slider').forEach(sliderContainer => {
+            const sliders = sliderContainer.querySelectorAll('.slider, .sliderS');
+            const btnPrev = sliderContainer.querySelector('.prev-button');
+            const btnNext = sliderContainer.querySelector('.next-button');
+            
+            let currentSlide = 0;
+
+            function hideSliders() {
+                sliders.forEach(item => item.classList.remove('on', 'ons'));
+            }
+
+            function showSlider() {
+                sliders[currentSlide].classList.add(sliders[currentSlide].classList.contains('slider') ? 'on' : 'ons');
+            }
+
+            function nextSlider() {
+                hideSliders();
+                currentSlide = (currentSlide + 1) % sliders.length;
+                showSlider();
+            }
+
+            function prevSlider() {
+                hideSliders();
+                currentSlide = (currentSlide - 1 + sliders.length) % sliders.length;
+                showSlider();
+            }
+
+            btnNext.addEventListener('click', nextSlider);
+            btnPrev.addEventListener('click', prevSlider);
+        });
+    </script>
+    
+
+<section>
+    <div class="container-rodape">
+        <h1>nossas redes</h1>
+        <div class="instagram">
+            <a href="https://www.instagram.com/hacksnackbr/profilecard/?igsh=MTRlczJkcngzOGJlaw==">
+                <img src="img/instagram.jpg" alt="Instagram">
+            </a>
+            <h4>Imagens meramente ilustrativas. Protótipo criado com objetivos educacoinais. Hack&Snack corporation. TCC - Informática para a internet.</h4>
+        </div>
+    </div>
+</section>
+</body>
+</html>
